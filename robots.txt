@@ -1,0 +1,52 @@
+# AI 与搜索引擎爬虫均欢迎抓取本站 / All search and AI crawlers welcome
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: Baiduspider
+User-agent: YisouSpider
+User-agent: Sogou web spider
+User-agent: 360Spider
+User-agent: DuckAssistBot
+User-agent: meta-externalagent
+User-agent: CCBot
+User-agent: Amazonbot
+User-agent: MistralAI-User
+User-agent: cohere-ai
+User-agent: KimiBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://aipmandy.github.io/sitemap.xml
+Sitemap: https://aipmandy.github.io/AI-Awareness-Club/sitemap.xml
+Sitemap: https://aipmandy.github.io/AndyIPTest/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreeCover/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreePhoto/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreeToken/sitemap.xml
+Sitemap: https://aipmandy.github.io/GoodPaper/sitemap.xml
+Sitemap: https://aipmandy.github.io/chatgpt-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/chinese-x-creators/sitemap.xml
+Sitemap: https://aipmandy.github.io/github-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/grok-bot-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/how-to-earn-usd-from-china/sitemap.xml
+Sitemap: https://aipmandy.github.io/how-to-survive-unemployment/sitemap.xml
+Sitemap: https://aipmandy.github.io/infj-career-growth-guide/sitemap.xml
+Sitemap: https://aipmandy.github.io/intj-growth-guide/sitemap.xml
+Sitemap: https://aipmandy.github.io/muse-guide/sitemap.xml
+Sitemap: https://aipmandy.github.io/rea-guide-cn/sitemap.xml
+Sitemap: https://aipmandy.github.io/threads-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/x-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/xiaohongshu-income-handbook/sitemap.xml
