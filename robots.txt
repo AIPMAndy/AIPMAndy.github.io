@@ -50,3 +50,12 @@ Sitemap: https://aipmandy.github.io/rea-guide-cn/sitemap.xml
 Sitemap: https://aipmandy.github.io/threads-income-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/x-income-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/xiaohongshu-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/how-to-get-offer/sitemap.xml
+Sitemap: https://aipmandy.github.io/how-to-job-hop-and-raise-salary/sitemap.xml
+Sitemap: https://aipmandy.github.io/restaurant-ai-customer-acquisition-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/ai-knowledge-paid-acquisition-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/local-business-ai-growth-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/geo-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/seo-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/HowToMakeMoneyOnYouTube/sitemap.xml
+Sitemap: https://aipmandy.github.io/ai-china-content-commerce-handbook/sitemap.xml
