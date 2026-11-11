@@ -59,3 +59,4 @@ Sitemap: https://aipmandy.github.io/geo-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/seo-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/HowToMakeMoneyOnYouTube/sitemap.xml
 Sitemap: https://aipmandy.github.io/ai-china-content-commerce-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/anthropic-claude-code-agent-handbook/sitemap.xml
