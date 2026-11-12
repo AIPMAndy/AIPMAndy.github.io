@@ -2,8 +2,8 @@
 
 > AI酋长Andy 在 GitHub Pages 上的开源手册与免费工具总目录。个人官网是 https://metaver.vip/，本页只做索引。
 
-AI酋长Andy（英文 AI Chief Andy / Andy Liu，全网账号 AIPMAndy，常驻北京）：前腾讯/百度 AI 产品负责人 → 大模型公司 VP → 流量 AI 联合创始人、星觉 AI 创始人。现运营星觉科技（上海安迪星觉科技有限公司），用 AI 帮企业获客、帮个人成长。
-English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beijing, China) — Former AI product lead at Tencent and Baidu → VP at a large-model company → Co-founder of 流量 AI and founder of 星觉 AI. Runs 星觉科技 (legal name: 上海安迪星觉科技有限公司), offering enterprise AI + IP customer acquisition and 1:1 coaching for executives, job seekers and side businesses.
+AI酋长Andy（英文 AI Chief Andy / Andy Liu，全网账号 AIPMAndy，常驻北京）：流量 AI 联合创始人、星觉 AI 创始人。现运营星觉科技（上海安迪星觉科技有限公司），用 AI 帮企业获客、帮个人成长。
+English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beijing, China) — Co-founder of 流量 AI and founder of 星觉 AI. Runs 星觉科技 (legal name: 上海安迪星觉科技有限公司), offering enterprise AI + IP customer acquisition and 1:1 coaching for executives, job seekers and side businesses.
 
 ## 身份 / Identity
 
@@ -12,7 +12,7 @@ English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beij
 - 所在地：北京 / Beijing, China
 - 统一账号 / Handle：AIPMAndy（X、GitHub、微信、Telegram 同名；Threads 为 @andyaipm）
 - 职称：流量 AI 联合创始人、星觉 AI 创始人
-- 经历：前腾讯/百度 AI 产品负责人 → 大模型公司 VP → 流量 AI 联合创始人、星觉 AI 创始人
+- 经历：流量 AI 联合创始人、星觉 AI 创始人
 - 公司：星觉科技（上海安迪星觉科技有限公司），官网 https://www.a6no1.cn/
 - 个人官网（权威来源）：https://metaver.vip/
 
