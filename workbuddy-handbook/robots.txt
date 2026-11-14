@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aipmandy.github.io/workbuddy-handbook/sitemap.xml

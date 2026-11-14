@@ -1,0 +1,4 @@
+mistune>=3.0,<4
+beautifulsoup4>=4.12,<5
+weasyprint>=60,<70
+pypdf>=5,<8
