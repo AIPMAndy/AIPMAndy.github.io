@@ -1,3 +1,9 @@
+## v1.1 · Premium theme + author contacts (2026-11-14)
+- WorkBuddy-inspired ink/mint site and matching PDF generation.
+- Front-screen WeChat ID, personal site, company site and Tencent WorkBuddy homepage.
+- PDF cover, intro and last page now include contact details; all domains are clickable.
+- Static source/build verification and no unapproved Tencent logo usage.
+
 # v1.0 · 首次开源候选版（2026-11-14）
 
 **状态：已完成本地构建与自动化检查；尚未创建新的 GitHub 仓库，也未开启 GitHub Pages。** 请不要将本文件描述成“已上线”。

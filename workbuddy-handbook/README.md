@@ -12,6 +12,9 @@
 
 </div>
 
+
+> **联系作者（无需加微信也能免费阅读）**：微信 `AIPMAndy` · [个人官网 metaver.vip](https://metaver.vip/) · [星觉科技公司官网 www.a6no1.cn](https://www.a6no1.cn/) · [WorkBuddy 腾讯官方官网](https://www.workbuddy.cn/)。
+
 ## 你能获得什么
 
 - **22 个主要章节**：版本选择 → Win/Mac 安装 → 默认/Plan/Ask 模式 → 本地文件 → Excel/PPT/PDF → 内容创作 → 求职 → 企业获客 → 零代码网站 → Skill/连接器/远程助理 → 定时任务 → 成本与安全 → 平台迁移。
@@ -106,3 +109,9 @@ PDF 与站点取自 **同一个 `content/guide.md`** 和 `content/prompts.json`�
 教程**完全免费阅读、无需加微信**。更多 AI 产品与企业实战内容：[个人官网 metaver.vip](https://metaver.vip/) · [星觉科技 www.a6no1.cn](https://www.a6no1.cn/) · 公众号搜索 **AI 酋长 Andy** · 个人微信 **`AIPMAndy`**。
 
 本项目采用 [MIT License](LICENSE)，不涉及腾讯产品商标和服务许可的授权。
+
+## v1.1 品牌与设计规范
+
+- 官网导航：微信 `AIPMAndy`、个人官网 https://metaver.vip/、公司官网 https://www.a6no1.cn/、腾讯 WorkBuddy 官网 https://www.workbuddy.cn/。
+- 视觉采用深墨绿＋青绿的独立编辑式设计。**不代表腾讯官方出品、合作或授权。**
+- 项目源码：<https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/workbuddy-handbook>；网站：<https://aipmandy.github.io/workbuddy-handbook/>。

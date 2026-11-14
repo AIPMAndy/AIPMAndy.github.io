@@ -2,6 +2,7 @@
 
 > **独立开源 · 中文实操版 v1.0 · 资料核验日：2026-11-14**  
 > 作者：AI 酋长 Andy / 星觉科技 · GitHub：AIPMAndy  
+> 微信：**AIPMAndy** · [个人官网](https://metaver.vip/) · [公司官网](https://www.a6no1.cn/) · [WorkBuddy 官方官网](https://www.workbuddy.cn/)  
 > 适用对象：职场新人、内容创作者、求职者、运营人员、小团队负责人、对开发感兴趣的普通人。  
 > **非腾讯官方作品**。产品 UI、套餐、模型与权益会调整，请以腾讯官网和应用内当前显示为准。
 
@@ -483,6 +484,7 @@ A：提交 PR，包含最小输入、提示词、预期输出、人工验收结�
 - GitHub：[AIPMAndy](https://github.com/AIPMAndy)。
 - 个人官网：[metaver.vip](https://metaver.vip/)。
 - 公司官网：[星觉科技](https://www.a6no1.cn/)。
-- 个人微信：**`AIPMAndy`**；公众号搜索 **AI 酋长 Andy**。教程全部免费，不加微信也能看完。企业 AI 获客或个人 AI 陪跑需要进一步沟通时，可自行联系，非强制留资。
+- 个人微信：**`AIPMAndy`**；公众号搜索 **AI 酋长 Andy**。
+- WorkBuddy 官方官网：[www.workbuddy.cn](https://www.workbuddy.cn/)（腾讯产品入口，与本独立教程无授权、赞助或商业从属关系）。教程全部免费，不加微信也能看完。企业 AI 获客或个人 AI 陪跑需要进一步沟通时，可自行联系，非强制留资。
 
 > 我们不替任何厂商做营销。我们的目标是让普通人能够把工具掌握在自己手里，让每一次自动化都有可验证的价值。

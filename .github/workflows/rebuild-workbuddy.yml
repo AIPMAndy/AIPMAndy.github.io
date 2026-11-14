@@ -1,0 +1,42 @@
+name: Rebuild WorkBuddy PDF and website
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'workbuddy-handbook/**'
+      - '.github/workflows/rebuild-workbuddy.yml'
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CJK fonts and dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+          python -m pip install -r workbuddy-handbook/requirements.txt
+      - name: Generate and validate PDF and website
+        run: |
+          python workbuddy-handbook/scripts/build_all.py
+          python workbuddy-handbook/scripts/check_site.py
+          cp workbuddy-handbook/docs/index.html workbuddy-handbook/index.html
+          cp workbuddy-handbook/docs/llms.txt workbuddy-handbook/llms.txt
+          cp workbuddy-handbook/docs/robots.txt workbuddy-handbook/robots.txt
+          cp workbuddy-handbook/docs/sitemap.xml workbuddy-handbook/sitemap.xml
+          cp -a workbuddy-handbook/docs/assets/. workbuddy-handbook/assets/
+      - name: Commit generated materials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workbuddy-handbook/docs workbuddy-handbook/downloads workbuddy-handbook/index.html workbuddy-handbook/assets workbuddy-handbook/llms.txt workbuddy-handbook/robots.txt workbuddy-handbook/sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "build(workbuddy): refresh PDF and generated site"
+            git push origin HEAD:main
+          fi
