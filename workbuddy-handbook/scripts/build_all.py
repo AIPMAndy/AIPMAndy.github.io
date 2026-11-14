@@ -12,7 +12,7 @@ PROMPTS=json.loads((ROOT/'content/prompts.json').read_text(encoding='utf-8'))
 DOCS=ROOT/'docs'; ASSETS=DOCS/'assets'; DL=DOCS/'downloads'
 DOCS.mkdir(exist_ok=True); ASSETS.mkdir(exist_ok=True); DL.mkdir(exist_ok=True)
 SITE_URL='https://aipmandy.github.io/workbuddy-handbook/'
-REPO_URL='https://github.com/AIPMAndy/workbuddy-handbook'
+REPO_URL='https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/workbuddy-handbook'
 md=mistune.create_markdown(plugins=['table','task_lists','url','strikethrough'])
 body=BeautifulSoup(md(GUIDE),'html.parser')
 heads=[]

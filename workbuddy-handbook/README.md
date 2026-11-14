@@ -77,19 +77,17 @@ python scripts/check_site.py
 
 PDF 与站点取自 **同一个 `content/guide.md`** 和 `content/prompts.json`。`scripts/make_prompts.py` 仅用于初始化演示数据，日常更新请直接编辑 `content/prompts.json`；不要在编辑后执行该初始化脚本，否则会覆盖人工修改。修改正文后必须重建并提交 `docs/` 与 `downloads/`，避免网站/PDF 不一致。CI 会做基础质量校验；不等于已通过真实手机实机或产品客户端测试。
 
-## 发布到 GitHub Pages
+## 实际 GitHub 发布位置
 
-> **本地制作完成≠已在 GitHub Pages 上线**。请先创建公开仓库 `AIPMAndy/workbuddy-handbook` 并上传文件，再到仓库 `Settings → Pages` 中选择 `Deploy from a branch → main → /docs`，或改由你自己的 Actions 工作流发布。若仓库名称变化，更新 `scripts/build_all.py` 中 `SITE_URL` / `REPO_URL` 后重新构建。
+本项目 v1.0 已在 2026-11-14 提交到 [AIPMAndy 的公开 GitHub Pages 仓库](https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/workbuddy-handbook) 中的 `workbuddy-handbook/` 子目录。当前完整源码、任务模板、构建工具与 36 页 PDF 均在该目录；这不是单独创建的 `AIPMAndy/workbuddy-handbook` 仓库。
 
-如果你的电脑装有 GitHub CLI (`gh`) 并已登录账号，也可以解压后进入仓库目录运行：
+- [在线阅读站点](https://aipmandy.github.io/workbuddy-handbook/)
+- [PDF 在线地址](https://aipmandy.github.io/workbuddy-handbook/downloads/workbuddy-handbook.pdf)
+- [查看实际源码](https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/workbuddy-handbook)
 
-```bash
-bash scripts/publish_github.sh
-```
+如需日后迁移为独立仓库，在有创建仓库权限的电脑上，从该目录导出全部文件后运行 `bash scripts/publish_github.sh`，并在独立仓库里设置 Pages 来源为 `main /docs`。迁移时请一并更新 `scripts/build_all.py` 的 `REPO_URL`。
 
-该脚本会检查登录和仓库是否存在，首次发布时创建**公开仓库**并推送 `main`；不会强制推送或覆盖远端分支。之后仍需在 GitHub Pages 设置里明确启用 `main /docs`。
-
-然后手动检查：`https://aipmandy.github.io/workbuddy-handbook/` 和 `.../downloads/workbuddy-handbook.pdf` 可打开；手机无水平滚动；30 个复制按钮与成本计算器可运行；不将实际客户文件上传 GitHub。
+现在的 Pages 部署由母仓库负责；提交成功不等于部署立即生效，请以 GitHub 的 Pages 构建状态和线上 HTTP 访问为准。
 
 ## 证据等级
 
