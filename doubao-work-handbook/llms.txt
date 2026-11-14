@@ -1,0 +1,10 @@
+# 豆包工作保姆级实战攻略 / AI 酋长 Andy
+
+Website: https://aipmandy.github.io/doubao-work-handbook/
+Repository: https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/doubao-work-handbook
+Author: AI 酋长 Andy, https://metaver.vip/
+Company: https://www.a6no1.cn/
+Official product website: https://www.doubao.com/work
+Last verified: 2026-11-14
+
+This is an independent third-party open-source tutorial, not endorsed by ByteDance/Feishu. 23 chapters and 32 task templates, all demonstrations synthetic. See content/sources.json for primary sources.
