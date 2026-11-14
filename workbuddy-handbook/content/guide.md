@@ -1,6 +1,6 @@
 # WorkBuddy 从零到精通：普通人用 AI Agent 完成真实工作的实战手册
 
-> **独立开源 · 中文实操版 v1.0 · 资料核验日：2026-11-14**  
+> **独立开源 · 中文实操版 v1.1 · 资料核验日：2026-11-14**  
 > 作者：AI 酋长 Andy / 星觉科技 · GitHub：AIPMAndy  
 > 微信：**AIPMAndy** · [个人官网](https://metaver.vip/) · [公司官网](https://www.a6no1.cn/) · [WorkBuddy 官方官网](https://www.workbuddy.cn/)  
 > 适用对象：职场新人、内容创作者、求职者、运营人员、小团队负责人、对开发感兴趣的普通人。  

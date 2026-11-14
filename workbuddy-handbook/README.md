@@ -4,7 +4,7 @@
 
 **不是只会聊天，而是完成一个可验收的工作结果。**
 
-[📖 完整在线教程（GitHub Pages 发布后生效）](https://aipmandy.github.io/workbuddy-handbook/) · [📄 精美 PDF](downloads/workbuddy-handbook.pdf) · [🧰 30 个可复制任务](content/prompts.json) · [✅ 验收模板](templates/acceptance-checklist.csv)
+[📖 完整完整在线教程](https://aipmandy.github.io/workbuddy-handbook/) · [📄 精美 PDF](downloads/workbuddy-handbook.pdf) · [🧰 30 个可复制任务](content/prompts.json) · [✅ 验收模板](templates/acceptance-checklist.csv)
 
 作者：**AI 酋长 Andy / 星觉科技** · 文档核验日期：**2026-11-14** · 许可：**MIT**
 
