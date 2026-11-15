@@ -2,198 +2,89 @@
   {
     "repo": "AIPMAndy/wechat-account-launch-handbook",
     "file": "social-previews/wechat-account-launch-handbook.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/wechat-account-launch-handbook.png",
     "bytes": 208137,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/wechat-account-launch-handbook/",
-    "description": "微信公众号从 0 到 1 的开源攻略：24 章、30 天 SOP、模板与同源 PDF。不承诺爆款或收入。",
-    "topics": [
-      "wechat",
-      "official-account",
-      "content-marketing",
-      "handbook",
-      "chinese",
-      "github-pages"
-    ]
+    "homepage": "https://aipmandy.github.io/wechat-account-launch-handbook/"
   },
   {
     "repo": "AIPMAndy/doubao-work-handbook",
     "file": "social-previews/doubao-work-handbook.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/doubao-work-handbook.png",
     "bytes": 206230,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/doubao-work-handbook/",
-    "description": "豆包工作中文实战手册：23 章、32 个任务模板与同源 PDF。独立开源教程，非豆包或字节官方。",
-    "topics": [
-      "doubao",
-      "ai-agent",
-      "feishu",
-      "handbook",
-      "productivity",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/doubao-work-handbook/"
   },
   {
     "repo": "AIPMAndy/workbuddy-handbook",
     "file": "social-previews/workbuddy-handbook.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/workbuddy-handbook.png",
     "bytes": 199541,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/workbuddy-handbook/",
-    "description": "腾讯 WorkBuddy 中文实战手册：22 章、30 个任务模板与同源 PDF。独立开源教程，非腾讯官方。",
-    "topics": [
-      "workbuddy",
-      "ai-agent",
-      "handbook",
-      "productivity",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/workbuddy-handbook/"
   },
   {
     "repo": "AIPMAndy/FreeGIF",
     "file": "social-previews/FreeGIF.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/FreeGIF.png",
     "bytes": 201589,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/FreeGIF/",
-    "description": "浏览器本地 GIF 制作：弹跳、漂浮、摇摆、呼吸、双图切换与动态标题。不登录、不上传原图。",
-    "topics": [
-      "gif",
-      "animation",
-      "canvas",
-      "privacy",
-      "browser",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/FreeGIF/"
   },
   {
     "repo": "AIPMAndy/FreeWatermark",
     "file": "social-previews/FreeWatermark.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/FreeWatermark.png",
     "bytes": 202759,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/FreeWatermark/",
-    "description": "浏览器本地给图片加水印：品牌预设、平铺、署名、品牌条与批量导出。手机可用，不上传原图。",
-    "topics": [
-      "watermark",
-      "image",
-      "canvas",
-      "privacy",
-      "browser",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/FreeWatermark/"
   },
   {
     "repo": "AIPMAndy/FreeCloud",
     "file": "social-previews/FreeCloud.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/FreeCloud.png",
     "bytes": 187764,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/FreeCloud/",
-    "description": "FreeCloud 云优惠雷达：追踪官方云服务器、AI 工具与 Agent 部署优惠。Open-source cloud deals radar.",
-    "topics": [
-      "cloud",
-      "deals",
-      "aliyun",
-      "tencent-cloud",
-      "ai-tools",
-      "github-pages"
-    ]
+    "homepage": "https://aipmandy.github.io/FreeCloud/"
   },
   {
     "repo": "AIPMAndy/chinese-international-student-career-guide",
     "file": "social-previews/chinese-international-student-career-guide.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/chinese-international-student-career-guide.png",
     "bytes": 206201,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/chinese-international-student-career-guide/",
-    "description": "中国留学生跨地区求职开源攻略：路线、资格、材料、21 个地区页、模板与 PDF。不承诺录用。",
-    "topics": [
-      "career",
-      "international-students",
-      "job-search",
-      "handbook",
-      "chinese",
-      "github-pages"
-    ]
+    "homepage": "https://aipmandy.github.io/chinese-international-student-career-guide/"
   },
   {
     "repo": "AIPMAndy/chinese-international-student-product-jobs",
     "file": "social-previews/chinese-international-student-product-jobs.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/chinese-international-student-product-jobs.png",
     "bytes": 200300,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/chinese-international-student-product-jobs/",
-    "description": "中国留学生产品实习、APM 与正式岗求职攻略：从真实 JD 到作品集、模板和 PDF。不承诺录用。",
-    "topics": [
-      "product-management",
-      "career",
-      "international-students",
-      "handbook",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/chinese-international-student-product-jobs/"
   },
   {
     "repo": "AIPMAndy/chinese-international-student-ai-jobs",
     "file": "social-previews/chinese-international-student-ai-jobs.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/chinese-international-student-ai-jobs.png",
     "bytes": 204268,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/chinese-international-student-ai-jobs/",
-    "description": "中国留学生 AI 技术岗求职攻略：算法、AI 工程与应用工程，含可运行练习与 PDF。不承诺录用。",
-    "topics": [
-      "artificial-intelligence",
-      "career",
-      "international-students",
-      "machine-learning",
-      "handbook",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/chinese-international-student-ai-jobs/"
   },
   {
     "repo": "AIPMAndy/chinese-international-student-business-jobs",
     "file": "social-previews/chinese-international-student-business-jobs.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/chinese-international-student-business-jobs.png",
     "bytes": 210499,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/chinese-international-student-business-jobs/",
-    "description": "中国留学生商科求职攻略：咨询、金融会计、市场、运营供应链、经营分析与销售 BD。不承诺录用。",
-    "topics": [
-      "career",
-      "business",
-      "international-students",
-      "consulting",
-      "finance",
-      "handbook",
-      "chinese"
-    ]
+    "homepage": "https://aipmandy.github.io/chinese-international-student-business-jobs/"
   },
   {
     "repo": "AIPMAndy/Gemini-Canvas-Video-Kit",
     "file": "social-previews/Gemini-Canvas-Video-Kit.png",
-    "artifact": "/opt/cursor/artifacts/social-previews/Gemini-Canvas-Video-Kit.png",
     "bytes": 214273,
     "width": 1280,
     "height": 640,
-    "homepage": "https://aipmandy.github.io/Gemini-Canvas-Video-Kit/",
-    "description": "只用 Gemini 网页版 Canvas，把一句话做成可录屏的网页视频。含提示词工作室、演示与 PDF。非 Google 官方。",
-    "topics": [
-      "gemini",
-      "canvas",
-      "video",
-      "prompt-engineering",
-      "chinese",
-      "github-pages"
-    ]
+    "homepage": "https://aipmandy.github.io/Gemini-Canvas-Video-Kit/"
   }
 ]
