@@ -60,3 +60,11 @@ Sitemap: https://aipmandy.github.io/seo-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/HowToMakeMoneyOnYouTube/sitemap.xml
 Sitemap: https://aipmandy.github.io/ai-china-content-commerce-handbook/sitemap.xml
 Sitemap: https://aipmandy.github.io/anthropic-claude-code-agent-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/wechat-account-launch-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/doubao-work-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/workbuddy-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreeGIF/sitemap.xml
+Sitemap: https://aipmandy.github.io/chinese-international-student-career-guide/sitemap.xml
+Sitemap: https://aipmandy.github.io/chinese-international-student-product-jobs/sitemap.xml
+Sitemap: https://aipmandy.github.io/chinese-international-student-ai-jobs/sitemap.xml
+Sitemap: https://aipmandy.github.io/chinese-international-student-business-jobs/sitemap.xml

@@ -1,0 +1,11 @@
+# FreeGIF
+
+> 浏览器本地 GIF 制作工具。支持漂浮、弹跳、摇摆、呼吸、双图切换和打字标题。不登录，不上传原图。
+
+- 网站：https://aipmandy.github.io/FreeGIF/
+- 源码：https://github.com/AIPMAndy/FreeGIF
+- 作者：AI酋长Andy（流量 AI 联合创始人、星觉 AI 创始人），星觉科技，北京
+- 微信：AIPMAndy
+- 许可：MIT
+- 这不是 AI 生视频，也不承诺微信表情开放平台审核结果。
+- 当前页面由 https://aipmandy.github.io/ 的 FreeGIF 目录托管。FreeGIF 仓库自身的 GitHub Pages 尚未启用。
