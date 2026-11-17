@@ -103,14 +103,18 @@ jobs:
         with:
           name: portal-directory-pdf-and-page-qa
           path: ./_pdf_artifacts
-      - name: Assemble independent Pages artifact preserving repository assets
+      - name: Assemble Pages artifact without removing existing hosted subprojects
         run: |
           set -euo pipefail
-          mkdir -p _site
-          cp -a index.html robots.txt sitemap.xml llms.txt llms-full.txt favicon.svg favicon.ico apple-touch-icon.png og.png .nojekyll _site/
-          cp -a assets FreeGIF doubao-work-handbook workbuddy-handbook social-previews _site/
           mkdir -p _site/pdf
-          cp _pdf_artifacts/pdf/andy-open-source-catalog.pdf _pdf_artifacts/pdf/edition.json _site/pdf/
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='node_modules/' \
+            --exclude='scripts/' --exclude='_site/' --exclude='_pdf_artifacts/' \
+            --exclude='pdf/qa/' ./ _site/
+          pdf_path="$(find _pdf_artifacts -name 'andy-open-source-catalog.pdf' -print -quit)"
+          edition_path="$(find _pdf_artifacts -name 'edition.json' -print -quit)"
+          test -n "$pdf_path" && test -n "$edition_path"
+          cp "$pdf_path" _site/pdf/andy-open-source-catalog.pdf
+          cp "$edition_path" _site/pdf/edition.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
