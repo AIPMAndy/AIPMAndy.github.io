@@ -15,8 +15,9 @@ try {
     const rows = page.locator('#sites > ul > li');
     const original = await rows.count();
     assert.equal(original, 44, 'portal JSON-LD and directory are expected to match');
-    const ld = await page.locator('script[type="application/ld+json"]').textContent();
-    const entries = JSON.parse(ld)['@graph'].find(x => x['@type'] === 'ItemList').itemListElement;
+    const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+    const entities = blocks.flatMap(block => { const data = JSON.parse(block); return data['@graph'] || [data]; });
+    const entries = entities.find(x => x['@type'] === 'ItemList').itemListElement;
     assert.equal(entries.length, original);
     assert.deepEqual(entries.map(x => x.url), await page.locator('#sites > ul > li > a').evaluateAll(links => links.map(a => a.href)));
     await page.locator('#catalog-search').fill('FreeGIF');
