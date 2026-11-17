@@ -174,7 +174,7 @@
    "isPartOf": {
     "@id": "https://aipmandy.github.io/#website"
    },
-   "dateModified": "2026-11-15"
+   "dateModified": "2026-11-18"
   },
   {
    "@type": "ItemList",
@@ -449,11 +449,63 @@
  ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  "@id": "https://aipmandy.github.io/pdf/andy-open-source-catalog.pdf#document",
+  "name": "AI酋长Andy · 开源项目与免费工具导航册",
+  "url": "https://aipmandy.github.io/pdf/andy-open-source-catalog.pdf",
+  "encodingFormat": "application/pdf",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-18",
+  "author": {"@id": "https://metaver.vip/#person"},
+  "publisher": {"@id": "https://www.a6no1.cn/#organization"},
+  "isPartOf": {"@id": "https://aipmandy.github.io/#website"},
+  "description": "从本门户公开 JSON-LD ItemList 同源生成的项目目录，保留公开地址；不是逐站链接可用性审计。"
+}
+</script>
+<script src="/assets/portal-catalog.js" defer></script>
 <style>
-body{font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;max-width:860px;margin:0 auto;padding:32px 20px;color:#1f2328;background:#fff}
-a{color:#0969da} h1{font-size:28px;margin:.2em 0} h2{margin-top:2em;border-bottom:1px solid #eee;padding-bottom:.2em}
-header{display:flex;gap:16px;align-items:center} header img{width:72px;height:72px;border-radius:50%}
-small{color:#57606a} li{margin:.35em 0} footer{margin-top:3em;color:#57606a;font-size:14px}
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-size:16px;line-height:1.7;max-width:1100px;margin:auto;padding:32px clamp(18px,4vw,56px) 56px;color:#17212b;background:#fff}
+a{color:#1656b8;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#103c80}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #4e8cf5;outline-offset:3px}
+header{display:flex;gap:18px;align-items:center;border-bottom:1px solid #e6eaf0;padding:0 0 30px}
+header img{width:72px;height:72px;border-radius:50%}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:.15em 0}
+h2{font-size:clamp(23px,3vw,29px);letter-spacing:-.02em;margin:2.3em 0 .8em;padding-bottom:.45em;border-bottom:1px solid #e5e9ee}
+h3{font-size:19px;margin:1.5em 0 .4em}
+p{max-width:78ch}small{color:#586779}
+li{margin:.35em 0}
+#about>ul{padding-left:22px}
+#sites{scroll-margin-top:20px}
+#sites>ul{padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#sites>ul>li{margin:0;padding:18px 19px;background:#fff;border:1px solid #dfe5ec;border-radius:14px;min-width:0;overflow-wrap:anywhere;box-shadow:0 3px 12px rgba(25,47,70,.025)}
+#sites>ul>li>a{display:inline-block;font-weight:650;line-height:1.45;color:#163a6b;text-decoration:none}
+#sites>ul>li>a:hover{text-decoration:underline}
+#sites>ul>li>small{display:inline-block;margin-top:8px;font-size:13px;line-height:1.55}
+#sites>ul>li[hidden]{display:none!important}
+.catalog-intro{max-width:74ch;color:#536171}
+.catalog-tools{margin:20px 0 22px;padding:20px 22px 16px;border:1px solid #dae2ec;border-radius:16px;background:#f8fafc}
+.catalog-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,190px);gap:12px;align-items:end}
+.catalog-control{display:flex;flex-direction:column;gap:6px}
+.catalog-control label{font-size:13px;font-weight:650;color:#3b4858}
+.catalog-control input,.catalog-control select{width:100%;font:inherit;min-height:48px;border:1px solid #b8c5d3;border-radius:9px;background:#fff;color:#17212b;padding:9px 13px}
+.catalog-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:12px}
+.catalog-actions button,.catalog-actions a{font:inherit;font-size:14px;font-weight:600;min-height:44px;border-radius:8px;padding:8px 14px;border:1px solid #c2ccd8;background:#fff;text-decoration:none;color:#193a67;cursor:pointer}
+.catalog-actions .primary{background:#1e3d67;color:#fff;border-color:#1e3d67}
+.catalog-actions button:disabled{opacity:.5;cursor:not-allowed}
+#catalog-count{font-size:13px;color:#4b5969;font-variant-numeric:tabular-nums;margin-left:auto}
+#catalog-empty{padding:22px;border:1px dashed #c8d2dd;border-radius:10px;color:#52606d}
+.catalog-note{font-size:12px;color:#566579;margin:12px 0 0}
+.quick-link{display:inline-flex;align-items:center;min-height:44px;margin-top:18px;font-weight:600}
+footer{margin-top:4em;border-top:1px solid #e1e7ef;padding-top:20px;color:#586779;font-size:14px}
+@media(max-width:720px){body{padding:22px 17px 42px}header{align-items:flex-start}header img{width:56px;height:56px}#sites>ul{grid-template-columns:1fr}.catalog-form{grid-template-columns:1fr}#catalog-count{width:100%;margin-left:0}.catalog-tools{padding:16px}#sites>ul>li{padding:16px}h2{margin-top:1.8em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -461,6 +513,7 @@ small{color:#57606a} li{margin:.35em 0} footer{margin-top:3em;color:#57606a;font
   <img src="https://avatars.githubusercontent.com/u/31501333?v=4" alt="AI酋长Andy 头像" width="72" height="72">
   <div><h1>AI酋长Andy</h1><div>AI Chief Andy · @AIPMAndy · 流量 AI 联合创始人、星觉 AI 创始人</div></div>
 </header>
+<a class="quick-link" href="#sites">直接查找免费教程与工具 ↓</a>
 <main>
   <section id="about" lang="zh-CN">
     <h2>关于 AI酋长Andy</h2>
@@ -518,6 +571,35 @@ small{color:#57606a} li{margin:.35em 0} footer{margin-top:3em;color:#57606a;font
   </section>
   <section id="sites">
     <h2>全部开源手册与免费工具</h2>
+    <p class="catalog-intro">按问题查找你需要的公开教程、AI 工作流与免费工具。可以筛选、离线导出当前结果，或者下载整份可点击的导航 PDF；开放内容无需添加微信才能阅读。</p>
+    <div id="catalog-tools" class="catalog-tools" aria-label="项目搜索与筛选">
+      <div class="catalog-form">
+        <div class="catalog-control">
+          <label for="catalog-search">搜索项目名称或解决的问题</label>
+          <input type="search" id="catalog-search" placeholder="如：求职、iPhone、AI、GitHub" autocomplete="off">
+        </div>
+        <div class="catalog-control">
+          <label for="catalog-category">领域</label>
+          <select id="catalog-category">
+            <option value="all">全部领域</option>
+            <option value="career">职业与求职</option>
+            <option value="tools">免费实用工具</option>
+            <option value="business">创作与商业</option>
+            <option value="workflow">AI 工作流</option>
+            <option value="growth">个人成长</option>
+            <option value="other">其他开源研究</option>
+          </select>
+        </div>
+      </div>
+      <div class="catalog-actions">
+        <button id="catalog-reset" type="button">重置筛选</button>
+        <button id="catalog-export" type="button">导出当前结果 TXT</button>
+        <a class="primary" href="/pdf/andy-open-source-catalog.pdf">下载完整目录 PDF</a>
+        <span id="catalog-count" role="status" aria-live="polite">正在读取项目目录…</span>
+      </div>
+      <p class="catalog-note">项目链接与说明来自当前门户目录，PDF 是同源快照，并非逐站可用性或商业结果证明；外部平台政策请以其最新官方说明为准。本地筛选不上传任何输入。</p>
+    </div>
+    <p id="catalog-empty" hidden>没有匹配结果。试试更短的关键词，或点击“重置筛选”。</p>
     <ul>
       <li><a href="https://aipmandy.github.io/AI-Awareness-Club/">AI醒觉社（AI Awareness Club）｜让 AI 成为利人利己的力量</a><br><small>AI醒觉社公开学习站：AI 入门、职业转型、AI 副业、个人 IP、管理者 AI、MBTI 成长。免费开源教程、路径与实际交付模板。</small></li>
       <li><a href="https://aipmandy.github.io/Andy-Video-Skill/">Andy-Video-Skill · Showcase</a></li>
@@ -566,6 +648,6 @@ small{color:#57606a} li{margin:.35em 0} footer{margin-top:3em;color:#57606a;font
     </ul>
   </section>
 </main>
-<footer>个人官网 <a href="https://metaver.vip/">metaver.vip</a> · 公司官网 <a href="https://www.a6no1.cn/">www.a6no1.cn</a> · <a href="https://aipmandy.github.io/llms.txt">llms.txt</a> · 更新于 2026-11-15</footer>
+<footer>个人官网 <a href="https://metaver.vip/">metaver.vip</a> · 公司官网 <a href="https://www.a6no1.cn/">www.a6no1.cn</a> · <a href="https://aipmandy.github.io/llms.txt">llms.txt</a> · 更新于 2026-11-18</footer>
 </body>
 </html>
