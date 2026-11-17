@@ -15,6 +15,7 @@ on:
       - assets/portal-catalog.js
       - scripts/build_portal_pdf.py
       - scripts/check_portal_pdf.py
+      - scripts/browser_smoke.mjs
       - .github/workflows/catalog.yml
   workflow_dispatch:
 permissions:
