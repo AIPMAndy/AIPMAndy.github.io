@@ -1,0 +1,43 @@
+name: FreePublish browser regression
+
+on:
+  pull_request:
+    paths:
+      - "FreePublish/**"
+      - "scripts/verify_freepublish_browser.mjs"
+      - ".github/workflows/freepublish-browser.yml"
+  push:
+    branches: [main]
+    paths:
+      - "FreePublish/**"
+      - "scripts/verify_freepublish_browser.mjs"
+      - ".github/workflows/freepublish-browser.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout test source
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test actual live FreePublish workflow on desktop and mobile
+        run: node scripts/verify_freepublish_browser.mjs
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: freepublish-browser-screens
+          path: /tmp/freepublish-*.png
+          if-no-files-found: ignore
+          retention-days: 14
