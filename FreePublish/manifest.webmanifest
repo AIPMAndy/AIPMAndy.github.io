@@ -1,0 +1,20 @@
+{
+  "name": "FreePublish · 安全多平台发布工作台",
+  "short_name": "FreePublish",
+  "description": "安全审核、多平台内容适配、本地媒体打包与人工发布辅助。绝不托管账号。",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#172232",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
