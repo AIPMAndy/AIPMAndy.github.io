@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="FreePublish — 安全多平台半自动发布工作台：内容准备、逐平台审核、人工确认发布、结果留痕。">
+  <title>FreePublish · 安全多平台发布工作台</title>
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="canonical" href="https://aipmandy.github.io/FreePublish/">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand">
+        <div class="brand-symbol" aria-hidden="true">F<span>·</span></div>
+        <div><div class="brand-name">FreePublish</div><div class="brand-subtitle">安全发布工作台</div></div>
+      </div>
+      <div class="section-caption">工作空间</div>
+      <nav class="navigation">
+        <button class="nav-button active" data-view="dashboard" type="button"><span aria-hidden="true">▦</span> 总览</button>
+        <button class="nav-button" data-view="library" type="button"><span aria-hidden="true">▤</span> 内容库</button>
+        <button class="nav-button" data-view="review" type="button"><span aria-hidden="true">✓</span> 审核与发布</button>
+        <button class="nav-button" data-view="calendar" type="button"><span aria-hidden="true">▦</span> 发布计划</button>
+        <button class="nav-button" data-view="logs" type="button"><span aria-hidden="true">≡</span> 操作记录</button>
+        <button class="nav-button" data-view="about" type="button"><span aria-hidden="true">◈</span> 安全说明</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="safe-note"><span class="safe-dot"></span> 本地优先 · 不托管账号</div>
+        <div class="mini-text">不会读取 Cookie，不会代替你点击发布。内容仅在当前浏览器中存储。</div>
+        <a href="https://github.com/AIPMAndy/free-publish" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-heading"><span class="eyebrow">CREATOR OPERATIONS</span><span class="topbar-name">Content → Review → Publish</span></div>
+        <div class="top-actions">
+          <button class="btn btn-quiet" data-action="backup" type="button">导出备份</button>
+          <button class="btn btn-quiet" data-action="import" type="button">导入备份</button>
+          <button class="btn btn-primary" data-action="new" type="button"><span aria-hidden="true">＋</span> 新建内容</button>
+        </div>
+      </header>
+      <main id="workspace" class="workspace" tabindex="-1"></main>
+      <footer class="footer">FreePublish 2.0 · Local-first · 最终发布必须由人确认 · 不保证任何平台审核结果</footer>
+    </div>
+  </div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden aria-label="选择 FreePublish JSON 备份">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>
