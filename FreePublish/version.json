@@ -2,7 +2,7 @@
   "name": "FreePublish",
   "version": "3.0.0",
   "source_repository": "AIPMAndy/free-publish",
-  "source_commit": "0b10bb4944ff19b4482731d9eedc560e57ecdf66",
+  "source_commit": "87876b4bf896f141634594787d81cebb06012d0e",
   "mode": "local-first",
   "auto_publish": false
 }
