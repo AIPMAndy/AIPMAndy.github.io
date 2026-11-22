@@ -29,7 +29,17 @@ try {
     });
     await page.locator('.media-meta').getByText('900×1600', {exact:false}).waitFor();
     await page.locator('button[data-action="generate-all"]').click();
-    await page.locator('#variant-title').waitFor();
+    const snapshot = await page.evaluate(() => {
+      const st = JSON.parse(localStorage.getItem('freepublish.v1'));
+      return {title:st?.posts?.[0]?.title, source:st?.posts?.[0]?.source,
+        platformKeys:Object.keys(st?.posts?.[0]?.variants || {}),
+        toast:document.querySelector('#toast')?.textContent,
+        viewHeader:document.querySelector('h1.page-title')?.textContent,
+        variantTitleExists:!!document.querySelector('#variant-title')};
+    });
+    console.log('After generate:',JSON.stringify(snapshot));
+    await page.screenshot({path:'/tmp/freepublish-after-generate-' + width + '.png',fullPage:false});
+    await page.locator('#variant-title').waitFor({timeout:6000});
     await page.locator('#variant-body').fill('在小红书上看这段真实的发布工作流：先编辑，再审核，再人工发布。');
     await page.locator('#variant-account').fill('@test-account');
     assert.equal(await page.locator('.preview-media img').count(),1, 'real local image preview');
