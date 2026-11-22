@@ -1,0 +1,43 @@
+name: Verify FreePublish live deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "FreePublish/**"
+      - ".github/workflows/verify-freepublish-live.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public page, source bundle, and version
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://aipmandy.github.io/FreePublish"
+          EXPECTED_SHA="0b10bb4944ff19b4482731d9eedc560e57ecdf66"
+          success=0
+          for i in $(seq 1 18); do
+            echo "Checking attempt $i against $BASE/"
+            if curl --fail --location --silent --show-error --max-time 15 "$BASE/" -o /tmp/fp-index.html &&
+               curl --fail --location --silent --show-error --max-time 15 "$BASE/version.json" -o /tmp/fp-version.json &&
+               curl --fail --location --silent --show-error --max-time 15 "$BASE/src/app.mjs" -o /tmp/fp-app.mjs &&
+               grep -Fq 'FreePublish' /tmp/fp-index.html &&
+               grep -Fq "$EXPECTED_SHA" /tmp/fp-version.json &&
+               grep -Fq 'readyForManualPublish' /tmp/fp-app.mjs; then
+              success=1
+              break
+            fi
+            sleep 5
+          done
+          if [ "$success" -ne 1 ]; then
+            echo "::error::FreePublish online verification failed. Check GitHub Pages deployment and public routing."
+            exit 1
+          fi
+          echo "Verified: $BASE/"
+          wc -c /tmp/fp-index.html /tmp/fp-version.json /tmp/fp-app.mjs
