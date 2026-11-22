@@ -565,6 +565,9 @@ document.addEventListener('change', function(event) {
     }
     return;
   }
+  // Text fields were already saved by the input event. A blur/change event must
+  // not re-render the editor: replacing a focused textarea can discard typed text.
+  if (input.type !== 'checkbox' && input.tagName !== 'SELECT' && input.type !== 'datetime-local') return;
   const post = selectedPost();
   if (!post) return;
   if (input.dataset.scope === 'publish-check') {
