@@ -90,20 +90,40 @@ jobs:
           name: gemini-handbook-v1-pdf
           path: gemini-handbook/downloads/gemini-practical-handbook.pdf
           retention-days: 30
-      - name: Commit release PDF to public Pages branch (no force push)
+      - name: Commit deterministic PDF to current public Pages branch (no force push)
         if: github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f gemini-handbook/downloads/gemini-practical-handbook.pdf
-          if git diff --cached --quiet; then
-            echo 'PDF already matches course source'
-          else
-            git commit -m 'docs(gemini): publish source-matched PDF [skip ci]'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          built_pdf="/tmp/gemini-handbook-built-${GITHUB_RUN_ID}.pdf"
+          cp gemini-handbook/downloads/gemini-practical-handbook.pdf "$built_pdf"
+          original_source_sha="$(git rev-parse HEAD:gemini-handbook/data.js)"
+          done=0
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            latest_source_sha="$(git rev-parse origin/main:gemini-handbook/data.js)"
+            if [[ "$original_source_sha" != "$latest_source_sha" ]]; then
+              echo "Source changed during PDF build; skip stale publication"
+              exit 0
+            fi
+            git reset --hard origin/main
+            cp "$built_pdf" gemini-handbook/downloads/gemini-practical-handbook.pdf
+            git add -f gemini-handbook/downloads/gemini-practical-handbook.pdf
+            if git diff --cached --quiet; then
+              echo "Source-matched PDF already published"
+              done=1
+              break
+            fi
+            git commit -m 'docs(gemini): publish deterministic source-matched PDF [skip ci]'
+            if git push origin HEAD:main; then
+              done=1
+              break
+            fi
+            echo "Competing commit detected, retrying safe fast-forward publication attempt $attempt"
+            sleep 2
+          done
+          test "$done" = 1
       - name: Detect existing Pages mode without changing configuration
         id: pages-mode
         if: github.ref == 'refs/heads/main'
