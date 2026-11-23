@@ -26,6 +26,13 @@ async function run(width, height) {
   assert(await page.locator('#resource-list a').count() === 12, '12 source links exist');
   await page.screenshot({ path: join(screenshots, 'home-' + width + '.png'), fullPage: true });
   const overflow = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, viewport: window.innerWidth }));
+  if (overflow.scroll > overflow.viewport + 1) {
+    const offending = await page.evaluate(() => [...document.body.querySelectorAll('*')].map(el => {
+      const r = el.getBoundingClientRect();
+      return {tag:el.tagName.toLowerCase(),cls:String(el.className||'').slice(0,90),id:el.id||'',right:Math.round(r.right),left:Math.round(r.left),width:Math.round(r.width)};
+    }).filter(r => r.right > window.innerWidth + 2 || r.left < -2).sort((a,b)=>b.right-a.right).slice(0,20));
+    console.log('OFFENDING ELEMENTS '+width,JSON.stringify(offending));
+  }
   assert(overflow.scroll <= overflow.viewport + 1, `horizontal overflow on ${width}px: ${JSON.stringify(overflow)}`);
 
   await page.locator('#lesson-search').fill('Deep Research');
