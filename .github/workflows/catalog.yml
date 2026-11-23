@@ -61,19 +61,41 @@ jobs:
             pdf/qa/report.json
             pdf/qa/page-*.png
           retention-days: 30
-      - name: Archive source-matched PDF on main, never force push
+      - name: Archive source-matched PDF with safe fast-forward retries
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f pdf/andy-open-source-catalog.pdf pdf/edition.json
-          if git diff --cached --quiet; then
-            echo 'Catalog PDF and edition are unchanged'
-          else
+          mkdir -p /tmp/portal-qa-release
+          cp pdf/andy-open-source-catalog.pdf pdf/edition.json /tmp/portal-qa-release/
+          source_index_sha="$(git rev-parse HEAD:index.html)"
+          source_catalog_sha="$(git rev-parse HEAD:assets/portal-catalog.js)"
+          done=0
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if [[ "$source_index_sha" != "$(git rev-parse origin/main:index.html)" ]] || [[ "$source_catalog_sha" != "$(git rev-parse origin/main:assets/portal-catalog.js)" ]]; then
+              echo "Catalog source changed during build; skip stale PDF publication"
+              exit 0
+            fi
+            git reset --hard origin/main
+            cp /tmp/portal-qa-release/andy-open-source-catalog.pdf pdf/andy-open-source-catalog.pdf
+            cp /tmp/portal-qa-release/edition.json pdf/edition.json
+            git add -f pdf/andy-open-source-catalog.pdf pdf/edition.json
+            if git diff --cached --quiet; then
+              echo "Catalog PDF and edition already match source"
+              done=1
+              break
+            fi
             git commit -m 'docs(pdf): archive source-verified portal navigation PDF [skip ci]'
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              done=1
+              break
+            fi
+            echo "Concurrent commit, retrying fast-forward ($attempt)"
+            sleep 2
+          done
+          test "$done" = 1
       - name: Inspect configured Pages source (do not mutate settings)
         id: pages-mode
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
