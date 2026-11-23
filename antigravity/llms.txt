@@ -1,0 +1,6 @@
+# Antigravity 保姆级实战攻略
+URL: https://aipmandy.github.io/antigravity/
+Author: AI 酋长 Andy
+Last verified: 2026-11-23
+Chapters: 15; actionable lessons: 50; prompt templates: 20
+Disclaimer: independent tutorial, not affiliated with Google.
