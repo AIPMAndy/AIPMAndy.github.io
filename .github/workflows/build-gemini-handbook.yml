@@ -1,0 +1,101 @@
+name: Gemini handbook PDF, QA and Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'gemini-handbook/data.js'
+      - 'gemini-handbook/index.html'
+      - 'gemini-handbook/site.js'
+      - 'gemini-handbook/style.css'
+      - 'gemini-handbook/print.html'
+      - 'gemini-handbook/print.js'
+      - 'gemini-handbook/scripts/**'
+      - 'gemini-handbook/README.md'
+      - '.github/workflows/build-gemini-handbook.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: gemini-handbook-release
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    outputs:
+      pages_mode: ${{ steps.pages-mode.outputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install embeddable Chinese font and PDF dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-arphic-gbsn00lp
+          python -m pip install 'reportlab>=4.2,<5' 'PyMuPDF>=1.24,<2'
+      - name: Validate JavaScript syntax (no hidden dependencies)
+        run: |
+          node --check gemini-handbook/data.js
+          node --check gemini-handbook/site.js
+          node --check gemini-handbook/print.js
+      - name: Build complete Chinese PDF from the same course source
+        run: python gemini-handbook/scripts/build_pdf.py
+      - name: Quality gate (source / content / PDF / links / clipping)
+        run: python gemini-handbook/scripts/check_release.py
+      - name: Smoke test static HTTP assets
+        run: |
+          python -m http.server 8123 --bind 127.0.0.1 >/tmp/gemini-http.log 2>&1 &
+          sleep 2
+          curl --fail --silent --show-error http://127.0.0.1:8123/gemini-handbook/ | grep -q 'GEMINI FIELD GUIDE'
+          curl --fail --silent --show-error http://127.0.0.1:8123/gemini-handbook/print.html | grep -q 'print-root'
+          curl --fail --silent --show-error --output /dev/null http://127.0.0.1:8123/gemini-handbook/downloads/gemini-practical-handbook.pdf
+      - name: Upload audit PDF as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-handbook-v1-pdf
+          path: gemini-handbook/downloads/gemini-practical-handbook.pdf
+          retention-days: 30
+      - name: Commit release PDF to public Pages branch (no force push)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f gemini-handbook/downloads/gemini-practical-handbook.pdf
+          if git diff --cached --quiet; then
+            echo 'PDF already matches course source'
+          else
+            git commit -m 'docs(gemini): publish source-matched PDF [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Detect existing Pages mode without changing configuration
+        id: pages-mode
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mode="$(gh api repos/${{ github.repository }}/pages --jq '.build_type' 2>/dev/null || echo unknown)"
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "Existing Pages build type: $mode"
+      - name: Upload site artifact if Pages uses Actions deployment
+        if: steps.pages-mode.outputs.mode == 'workflow'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+  deploy-if-actions:
+    needs: build
+    if: needs.build.outputs.pages_mode == 'workflow'
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: https://aipmandy.github.io/gemini-handbook/
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/deploy-pages@v4
