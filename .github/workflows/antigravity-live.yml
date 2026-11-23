@@ -1,0 +1,57 @@
+name: Antigravity handbook source and live verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'antigravity/**'
+      - '.github/workflows/antigravity-live.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source data, privacy and PDF link regression
+        run: python3 antigravity/scripts/check_site.py
+      - name: Check embedded chapter, actions and PDF signatures
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root = Path('antigravity')
+          d = json.loads((root / 'content/course.json').read_text(encoding='utf-8'))
+          assert len(d['chapters']) == 15
+          assert sum(len(c['lessons']) for c in d['chapters']) == 50
+          assert len(d['prompts']) == 20
+          pdf = (root / 'pdf/antigravity-handbook.pdf').read_bytes()
+          assert pdf.startswith(b'%PDF-') and b'%%EOF' in pdf[-64:]
+          assert len(pdf) > 100000
+          print('Source and formal PDF signatures OK')
+          PY
+      - name: Verify online page and PDF exact bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_html="$(sha256sum antigravity/index.html | cut -d' ' -f1)"
+          expected_pdf="$(sha256sum antigravity/pdf/antigravity-handbook.pdf | cut -d' ' -f1)"
+          url='https://aipmandy.github.io/antigravity'
+          for attempt in $(seq 1 24); do
+            if curl -fsSL --max-time 25 "$url/" -o /tmp/antigravity-live.html \
+              && curl -fsSL --max-time 35 "$url/pdf/antigravity-handbook.pdf" -o /tmp/antigravity-live.pdf \
+              && [ "$(sha256sum /tmp/antigravity-live.html | cut -d' ' -f1)" = "$expected_html" ] \
+              && [ "$(sha256sum /tmp/antigravity-live.pdf | cut -d' ' -f1)" = "$expected_pdf" ]; then
+              echo "LIVE VERIFIED page sha256=$expected_html"
+              echo "LIVE VERIFIED PDF sha256=$expected_pdf"
+              exit 0
+            fi
+            echo "Pages not yet exact source version, attempt $attempt/24"
+            sleep 12
+          done
+          echo 'Live HTML or PDF byte checks failed; published version is not verified.' >&2
+          exit 1
