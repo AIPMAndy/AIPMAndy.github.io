@@ -72,9 +72,9 @@ async function run(width, height) {
   await page.locator('.lesson').first().locator('summary').click();
   assert(await page.locator('.lesson').first().getAttribute('open') !== null, 'lesson expands');
 
-  const print = await page.request.get(new URL('print.html', base));
+  const print = await page.request.get(new URL('print.html', base).href);
   assert(print.status() === 200 && (await print.text()).includes('print-root'), 'print version responds');
-  const data = await page.request.get(new URL('data.js', base));
+  const data = await page.request.get(new URL('data.js', base).href);
   assert(data.status() === 200 && (await data.text()).includes('window.GEMINI_GUIDE'), 'source content responds');
   const pdfUrl = page.locator('a[download][href$=".pdf"]').first();
   assert(await pdfUrl.count() > 0, 'PDF download link exists');
