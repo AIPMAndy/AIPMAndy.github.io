@@ -68,7 +68,7 @@ async function run(width, height) {
   assert(await page.locator('.day7 input[data-day="0"]').isChecked(), 'local progress persisted on reload');
 
   await page.locator('[data-role="day30"][data-day30="30"]').click();
-  assert((await page.locator('#day30-detail').innerText()).includes('第30天'), '30-day task detail');
+  assert((await page.locator('#day30-detail').innerText()).includes('第 30 天'), '30-day task detail');
   await page.locator('.lesson').first().locator('summary').click();
   assert(await page.locator('.lesson').first().getAttribute('open') !== null, 'lesson expands');
 
