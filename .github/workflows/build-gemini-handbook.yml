@@ -21,6 +21,28 @@ concurrency:
   group: gemini-handbook-release
   cancel-in-progress: false
 jobs:
+  browser-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Chromium browser regression runner
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test actual mobile and desktop interactions
+        run: |
+          set -euo pipefail
+          python3 -m http.server 8123 --bind 127.0.0.1 >/tmp/gemini-browser-server.log 2>&1 &
+          node gemini-handbook/scripts/browser_smoke.mjs
+      - name: Preserve tested page screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-browser-qa-360-390-1280
+          path: gemini-handbook/qa/*.png
+          if-no-files-found: ignore
+          retention-days: 21
   build:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
