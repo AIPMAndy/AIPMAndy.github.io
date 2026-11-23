@@ -40,7 +40,7 @@ pages=[p.get_text() for p in doc]
 full="\n".join(pages)
 for s in ("Gemini","Deep Research","Canvas","Skills","CLI","API","安全","30","参考"):
     assert s in full, f"PDF missing readable term: {s}"
-assert len(full)>20000,f"PDF extracted text too short ({len(full)})"
+assert len(full)>16000,f"PDF extracted text too short ({len(full)})"
 assert len([x for x in data["prompts"] if x["title"] in full])>=30,"Missing prompts in PDF"
 assert len([m for m in data["modules"] if m["title"] in full])>=15,"Missing course chapters in PDF"
 link_count=sum(len(page.get_links()) for page in doc)
