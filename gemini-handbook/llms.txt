@@ -1,0 +1,14 @@
+# Gemini 保姆级实战攻略
+> AI 酋长 Andy 编写的独立免费 Gemini 2026 中文实战课程。非 Google 官方。
+
+Website: https://aipmandy.github.io/gemini-handbook/
+Full print: https://aipmandy.github.io/gemini-handbook/print.html
+Free PDF: https://aipmandy.github.io/gemini-handbook/downloads/gemini-practical-handbook.pdf
+Source: https://github.com/AIPMAndy/AIPMAndy.github.io/tree/main/gemini-handbook
+Version: 1.0.0, verified 2026-11-23
+
+18 lessons: Gemini App, prompting, files, Canvas, Deep Research, Workspace, NotebookLM, content, data, hiring, startup, Skills, Gemini CLI, AI Studio/API, multimodal, delivery, safety, 7/30-day training.
+32 task prompts, five role-based learning paths, 7-day and 30-day training.
+Official references and limitations are included in course data and each module.
+No user data collection on the site. Checkboxes store progress in browser localStorage only.
+Credits: AI 酋长 Andy · 星觉科技. Contact WeChat AIPMAndy. Websites: https://metaver.vip/ and https://www.a6no1.cn/.
