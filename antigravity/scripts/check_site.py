@@ -15,5 +15,6 @@ for term in ['localStorage','URL.createObjectURL','download-starter','site-searc
 for bad in ['googletagmanager.com','google-analytics.com','document.write','<iframe','https://cdn.']:
  assert bad not in H,bad
 assert len(re.findall(r'<h1(?:\s|>)',H.split('<script type="application/json" id="course-data">')[0]))==1
+assert H.count('href="./pdf/antigravity-handbook.pdf"')>=2, 'PDF must be downloadable from site'
 assert (ROOT/'pdf/antigravity-handbook.pdf').exists()
 print('OK 15 chapters / 50 actions / 20 prompts / safe self-contained website / PDF exists')
