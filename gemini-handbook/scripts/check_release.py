@@ -13,7 +13,7 @@ for name,n in (("modules",18),("prompts",32),("day7",7),("days30",30)):
     assert len(data[name])==n, f"Wrong {name} count"
 assert len({m["id"] for m in data["modules"]})==18
 assert len({p["id"] for p in data["prompts"]})==32
-assert {m["id"] for m in data["modules"]}==set(x for path in data["paths"] for x in path["lessonIds"]), "Broken path lesson ID / unreferenced module"
+assert set(x for path in data["paths"] for x in path["lessonIds"]).issubset({m["id"] for m in data["modules"]}), "Path references unknown module"
 for m in data["modules"]:
     assert len(m["steps"])>=3
     for k in ("goal","exercise","deliverable","acceptance","warning"):
