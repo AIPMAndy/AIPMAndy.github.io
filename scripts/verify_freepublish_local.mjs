@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
-const browser=await chromium.launch({headless:true});
+const browser=await chromium.launch(process.env.PLAYWRIGHT_USE_SYSTEM_CHROME ? {headless:true,channel:'chrome'} : {headless:true});
 const ORIGIN='http://127.0.0.1:8765/FreePublish/';
 try {
   for (const width of [360,390,1280]) {
