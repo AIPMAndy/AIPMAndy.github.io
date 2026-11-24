@@ -68,3 +68,8 @@ Sitemap: https://aipmandy.github.io/chinese-international-student-career-guide/s
 Sitemap: https://aipmandy.github.io/chinese-international-student-product-jobs/sitemap.xml
 Sitemap: https://aipmandy.github.io/chinese-international-student-ai-jobs/sitemap.xml
 Sitemap: https://aipmandy.github.io/chinese-international-student-business-jobs/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreePublish/sitemap.xml
+Sitemap: https://aipmandy.github.io/google-ai-income-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/FreeMacOn/sitemap.xml
+Sitemap: https://aipmandy.github.io/gemini-handbook/sitemap.xml
+Sitemap: https://aipmandy.github.io/antigravity/sitemap.xml

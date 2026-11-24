@@ -1,8 +1,9 @@
 {
   "name": "FreePublish",
-  "version": "3.0.0",
-  "source_repository": "AIPMAndy/free-publish",
-  "source_commit": "dd4e9898a3e0d5394cf19a13a3ef474258a5aac4",
+  "version": "3.0.1",
+  "source_repository": "AIPMAndy/FreePublish",
+  "source_commit": "31a1603a0aae6c82b7cd0a699e1fadbfe97183f3",
   "mode": "local-first",
-  "auto_publish": false
+  "auto_publish": false,
+  "updated_at": "2026-11-24"
 }

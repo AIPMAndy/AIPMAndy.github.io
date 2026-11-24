@@ -6,13 +6,20 @@
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f7f8fa">
   <meta name="description" content="FreePublish — 安全多平台半自动发布工作台：内容准备、逐平台审核、人工确认发布、结果留痕。">
-  <title>FreePublish · 安全多平台发布工作台</title>
+  <title>FreePublish · 安全多平台内容审核与发布工作台｜AI 酋长 Andy</title>
+  <meta name="author" content="AI 酋长 Andy">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://aipmandy.github.io/FreePublish/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FreePublish · 安全多平台内容审核与发布工作台">
+  <meta property="og:description" content="免费本地工作台：内容版本、平台草稿、审核清单、人工发布与记录导出。不托管账号，不代发。">
+  <meta property="og:url" content="https://aipmandy.github.io/FreePublish/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"FreePublish","url":"https://aipmandy.github.io/FreePublish/","applicationCategory":"BusinessApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"原创内容准备、人工审核、多平台草稿与本机导出，最终发布由用户本人执行。","author":{"@type":"Person","name":"AI 酋长 Andy","url":"https://metaver.vip/"},"publisher":{"@type":"Organization","name":"星觉科技","url":"https://www.a6no1.cn/"}}</script>
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-GCEeUU/zU5qGZEaVi7LB8q1EgaCiLbI7m/1BFLnSn3s='; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./src/styles.css">
-  <link rel="canonical" href="https://aipmandy.github.io/FreePublish/">
 </head>
 <body>
   <div class="app-shell">
@@ -33,7 +40,15 @@
       <div class="sidebar-bottom">
         <div class="safe-note"><span class="safe-dot"></span> 本地优先 · 不托管账号</div>
         <div class="mini-text">不会读取 Cookie，不会代替你点击发布。内容仅在当前浏览器中存储。</div>
-        <a href="https://github.com/AIPMAndy/free-publish" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
+        <div class="author-links" aria-label="作者与合作入口">
+          <span class="mini-text">出品：AI 酋长 Andy · 星觉科技</span>
+          <button type="button" id="copy-wechat" class="contact-copy" aria-label="复制作者微信 AIPMAndy">复制微信 AIPMAndy</button>
+          <span id="contact-feedback" class="contact-feedback" role="status" aria-live="polite"></span>
+          <a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">个人官网 ↗</a>
+          <a href="https://www.a6no1.cn/" target="_blank" rel="noopener noreferrer">星觉科技 ↗</a>
+          <a href="https://metaver.vip/services" target="_blank" rel="noopener noreferrer">服务与咨询 ↗</a>
+        </div>
+        <a href="https://github.com/AIPMAndy/FreePublish" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a>
       </div>
     </aside>
     <div class="main-column">
@@ -51,6 +66,7 @@
   </div>
   <input id="import-file" type="file" accept="application/json,.json" hidden aria-label="选择 FreePublish JSON 备份">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/contact.mjs"></script>
   <script type="module" src="./src/app.mjs"></script>
 </body>
 </html>

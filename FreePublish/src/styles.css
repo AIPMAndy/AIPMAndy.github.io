@@ -39,3 +39,11 @@
 .preview-media img,.preview-media video{width:100%;max-height:320px;object-fit:contain;display:block;background:#17202c;border:0;border-radius:3px}
 .final-checks{margin-top:17px;padding:17px;background:#f6f9fb;border:1px solid #dce5ed;border-radius:12px}.final-checks .field-label{margin-bottom:8px}
 .final-checks .checkbox-line{padding:7px 0}
+/* Subordinate author and service links: readable but not competing with the editor. */
+.author-links{display:flex;flex-direction:column;gap:7px;border-top:1px solid #dfe3e9;padding-top:15px;margin-top:15px}
+.author-links a{font-size:12px;line-height:1.55;text-decoration:none;color:#394354}
+.author-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.author-links .mini-text{font-size:11px;line-height:1.5;color:#697386}
+.contact-copy{font:inherit;font-size:12px;font-weight:650;line-height:1.5;padding:9px 12px;text-align:left;color:#19262b;background:#ecf4f1;border:1px solid #beded0;border-radius:10px;cursor:pointer}
+.contact-copy:hover{background:#dff1e9}.contact-copy:focus-visible{outline:3px solid #187f65;outline-offset:2px}
+.contact-feedback{font-size:11px;color:#256b53;min-height:1em}
