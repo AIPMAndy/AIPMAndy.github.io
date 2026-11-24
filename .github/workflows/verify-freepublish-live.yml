@@ -15,21 +15,32 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Verify public page, source bundle, and version
         shell: bash
         run: |
           set -euo pipefail
           BASE="https://aipmandy.github.io/FreePublish"
-          EXPECTED_SHA="dd4e9898a3e0d5394cf19a13a3ef474258a5aac4"
+          EXPECTED_SHA="5b40a8f7a6d4cc731cdc0c92498cfd27464438d9"
           success=0
           for i in $(seq 1 18); do
             echo "Checking attempt $i against $BASE/"
             if curl --fail --location --silent --show-error --max-time 15 "$BASE/" -o /tmp/fp-index.html &&
                curl --fail --location --silent --show-error --max-time 15 "$BASE/version.json" -o /tmp/fp-version.json &&
                curl --fail --location --silent --show-error --max-time 15 "$BASE/src/app.mjs" -o /tmp/fp-app.mjs &&
+               curl --fail --location --silent --show-error --max-time 15 "$BASE/src/contact.mjs" -o /tmp/fp-contact.mjs &&
+               curl --fail --location --silent --show-error --max-time 15 "$BASE/src/styles.css" -o /tmp/fp-styles.css &&
+               curl --fail --location --silent --show-error --max-time 15 "$BASE/sitemap.xml" -o /tmp/fp-sitemap.xml &&
                grep -Fq 'FreePublish' /tmp/fp-index.html &&
                grep -Fq "$EXPECTED_SHA" /tmp/fp-version.json &&
-               grep -Fq 'readyForManualPublish' /tmp/fp-app.mjs; then
+               grep -Fq 'readyForManualPublish' /tmp/fp-app.mjs &&
+               grep -Fq 'AIPMAndy' /tmp/fp-index.html &&
+               cmp -s /tmp/fp-index.html FreePublish/index.html &&
+               cmp -s /tmp/fp-app.mjs FreePublish/src/app.mjs &&
+               cmp -s /tmp/fp-contact.mjs FreePublish/src/contact.mjs &&
+               cmp -s /tmp/fp-styles.css FreePublish/src/styles.css &&
+               cmp -s /tmp/fp-sitemap.xml FreePublish/sitemap.xml &&
+               cmp -s /tmp/fp-version.json FreePublish/version.json; then
               success=1
               break
             fi
@@ -40,4 +51,4 @@ jobs:
             exit 1
           fi
           echo "Verified: $BASE/"
-          wc -c /tmp/fp-index.html /tmp/fp-version.json /tmp/fp-app.mjs
+          wc -c /tmp/fp-index.html /tmp/fp-version.json /tmp/fp-app.mjs /tmp/fp-contact.mjs

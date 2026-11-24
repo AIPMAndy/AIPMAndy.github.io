@@ -18,6 +18,8 @@ let currentView = 'dashboard';
 let selectedId = state.posts[0] ? state.posts[0].id : '';
 let selectedPlatform = 'xiaohongshu';
 let toastTimer;
+let viewAnimation;
+const prefersReducedMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: true };
 const mediaFiles = new Map(); // File objects exist only in memory, never saved to localStorage.
 const mediaPreviews = new Map(); // Blob URLs revoked on replacement or import.
 function releasePreview(postId) {
@@ -62,6 +64,7 @@ function selectedPost() {
 }
 function setView(view) {
   if (!views.has(view)) return;
+  const changed = currentView !== view;
   currentView = view;
   document.querySelectorAll('[data-view]').forEach(function(btn) {
     const active = btn.dataset.view === currentView;
@@ -69,7 +72,17 @@ function setView(view) {
     if (active) btn.setAttribute('aria-current', 'page');
     else btn.removeAttribute('aria-current');
   });
-  render();
+  render(!changed);
+  // Only navigation receives an entrance cue. Editing and repeated choices do not animate.
+  if (changed && !prefersReducedMotion.matches && typeof workspace.animate === 'function') {
+    viewAnimation?.cancel();
+    viewAnimation = workspace.animate(
+      [{ opacity: .76, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 170, easing: 'cubic-bezier(.2, 0, 0, 1)' }
+    );
+  } else if (changed) {
+    viewAnimation?.cancel();
+  }
 }
 function header(kicker, title, subtitle, actions = '') {
   return '<div class="page-head"><div><div class="eyebrow">' + e(kicker) + '</div>' +
@@ -328,9 +341,16 @@ function renderAbout() {
     '<div class="step"><span class="step-number">×</span><div><b>不保存真实媒体文件</b><p>只保留名称和内容文字，上传时从自己的电脑选择素材。</p></div></div>' +
     '</div></section></div><div class="callout" style="margin-top:18px"><strong>备份提醒：</strong>导入将替换当前库，且出于安全原因，会清空导入数据中的旧审批及“已发布”标记。请重新审核、确认。完整实现、测试与路线图见 GitHub 的 docs/ARCHITECTURE.md。</div>';
 }
-function render() {
+function render(preserveFocus = true) {
+  // Native checkbox/select focus survives an update even when the parent view is rebuilt.
+  // Do not interrupt a user editing a field by unexpectedly moving focus or scroll.
+  const active = preserveFocus && workspace.contains(document.activeElement) ? document.activeElement : null;
+  const fieldScope = active?.dataset?.scope;
+  const fieldName = active?.dataset?.field;
+  const focusSelector = fieldScope && fieldName ? '[data-scope="' + fieldScope + '"][data-field="' + fieldName + '"]' : null;
   const renderers = { dashboard: renderDashboard, library: renderLibrary, review: renderReview, calendar: renderCalendar, logs: renderLogs, about: renderAbout };
   workspace.innerHTML = renderers[currentView]();
+  if (focusSelector) workspace.querySelector(focusSelector)?.focus({ preventScroll: true });
 }
 function touch(post, contentChanged = true) {
   if (contentChanged) post.revision = (post.revision || 0) + 1;
@@ -575,7 +595,14 @@ document.addEventListener('change', function(event) {
     const v = post.variants[selectedPlatform];
     v.publishChecks ||= { account:false, media:false, disclosures:false, visibility:false };
     if (['account','media','disclosures','visibility'].includes(input.dataset.field)) v.publishChecks[input.dataset.field] = input.checked;
-    persist(); render(); return;
+    persist();
+    // Do not rebuild the whole review form on every checkbox: preserve focus,
+    // scroll position, and the user's partially entered published URL.
+    const ready = readyForManualPublish(post, selectedPlatform);
+    workspace.querySelectorAll('[data-action="open-platform"], [data-action="confirm-published"]').forEach(function(button) {
+      button.disabled = !ready;
+    });
+    return;
   }
   const obj = input.dataset.scope === 'post' ? post : post.variants[selectedPlatform];
   if (!obj) return;

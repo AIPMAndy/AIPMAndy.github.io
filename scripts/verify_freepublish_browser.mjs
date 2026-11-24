@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 
 const SITE = 'https://aipmandy.github.io/FreePublish/';
-const browser = await chromium.launch({headless:true});
+const browser = await chromium.launch(process.env.PLAYWRIGHT_USE_SYSTEM_CHROME ? {headless:true,channel:'chrome'} : {headless:true});
 const results = [];
 try {
   for (const width of [390, 1280]) {
