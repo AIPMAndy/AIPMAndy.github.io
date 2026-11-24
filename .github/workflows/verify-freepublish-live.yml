@@ -21,7 +21,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE="https://aipmandy.github.io/FreePublish"
-          EXPECTED_SHA="31a1603a0aae6c82b7cd0a699e1fadbfe97183f3"
+          EXPECTED_SHA="5b40a8f7a6d4cc731cdc0c92498cfd27464438d9"
           success=0
           for i in $(seq 1 18); do
             echo "Checking attempt $i against $BASE/"

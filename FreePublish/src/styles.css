@@ -47,3 +47,61 @@
 .contact-copy{font:inherit;font-size:12px;font-weight:650;line-height:1.5;padding:9px 12px;text-align:left;color:#19262b;background:#ecf4f1;border:1px solid #beded0;border-radius:10px;cursor:pointer}
 .contact-copy:hover{background:#dff1e9}.contact-copy:focus-visible{outline:3px solid #187f65;outline-offset:2px}
 .contact-feedback{font-size:11px;color:#256b53;min-height:1em}
+
+/* A single calm motion language. Animate only compositor-friendly properties on navigation. */
+:root { --motion-quick: 115ms; --motion-standard: 175ms; --motion-ease: cubic-bezier(.2, 0, 0, 1); }
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #3d91e8; outline-offset: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn,.nav-button,.platform-tab,.content-card,.queue-item,.contact-copy {
+    transition: background-color var(--motion-quick) var(--motion-ease),
+      color var(--motion-quick) var(--motion-ease),
+      border-color var(--motion-quick) var(--motion-ease),
+      box-shadow var(--motion-quick) var(--motion-ease),
+      transform var(--motion-quick) var(--motion-ease);
+  }
+  .btn:active:not(:disabled),.nav-button:active,.platform-tab:active,.contact-copy:active { transform: scale(.987); }
+  .toast { transition: opacity var(--motion-standard) var(--motion-ease),transform var(--motion-standard) var(--motion-ease); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .toast,.btn,.nav-button,.platform-tab,.content-card,.queue-item,.contact-copy { animation: none !important; transition: none !important; }
+}
+/* Dark appearance follows the system; the original light appearance remains default. */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: dark; background: #0d1520; color: #edf3fb; }
+  .sidebar,.stat,.panel,.content-card,.queue-item,.preview-phone,.contact-copy { background:#172331; color:#edf3fb; border-color:#2d3a4c; }
+  .topbar { background:#172331; border-color:#2d3a4c; }
+  .brand-name,.page-title,.row-title,.panel-title,.content-title,.stat-value,.field label,.field-label { color:#f1f5fb; }
+  .brand-subtitle,.section-caption,.eyebrow,.stat-label,.stat-foot,.page-desc,.row-sub,.fine-print,.field-hint,.mini-text,.panel-subtitle,.content-meta { color:#afbbca; }
+  .nav-button,.platform-tab,.btn { color:#dce7f5; border-color:#38485c; background:#1a2939; }
+  .nav-button:hover,.nav-button.active,.platform-tab:hover,.content-card:hover,.content-card.selected,.queue-item:hover,.queue-item.selected { background:#26394d; color:#fff; }
+  .btn-primary,.platform-tab.selected { color:#10202f; background:#b3d7f5; border-color:#b3d7f5; }
+  .btn-quiet { background:transparent; }
+  .field input:not([type=checkbox]):not([type=file]),.field textarea,.field select,.text-input {
+    background:#101b28; color:#f3f7fc; border-color:#405268;
+  }
+  .row-item,.row-item:hover,.panel-head,.content-card,.queue-item,.sidebar-bottom,.brand,.table-wrap { border-color:#304155; }
+  .row-item:hover { background:#1c2c3c; }
+  .callout,.receipt,.preview-wrap,.media-meta,.final-checks,.step-number,.empty,.chip { background:#1c2c3c; color:#dce7f4; border-color:#36485d; }
+  .callout strong { color:#e7efff; }
+  .callout.warn,.issue.warn { background:#382a1a; color:#ffdba5; border-color:#705434; }
+  .callout.stop,.issue.block { background:#41252c; color:#ffbec7; border-color:#76414b; }
+  .issue.good,.chip-positive { background:#18392e; color:#b4efd2; border-color:#315e4a; }
+  .issue { background:#1b2a39; color:#dbe5f1; border-color:#35485d; }
+  .chip-warn { background:#382a1a; color:#ffdba5; }
+  .chip-bad { background:#41252c; color:#ffbec7; }
+  .chip-dark { background:#263f59; color:#d4e9ff; }
+  .contact-copy { background:#1e3d34; color:#d2f5e8; border-color:#386856; }
+  .contact-feedback { color:#a4ebcf; }
+  .author-links { border-color:#304155; }
+  .author-links a,.text-link { color:#b3dafa; }
+  .toast { background:#e6effc; color:#182735; }
+  th { background:#1d2b3b; color:#bed0e2; }
+  td { color:#d2dfec; }
+  td,th { border-color:#334559; }
+  .preview-media { background:#26384b; color:#d4e0ee; }
+  .preview-copy p { color:#c6d5e6; }
+  .empty p,.step p,.callout p { color:#b8c6d6; }
+}
