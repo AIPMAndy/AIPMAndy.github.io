@@ -12,11 +12,15 @@
   const reset = document.getElementById('catalog-reset');
   const exportButton = document.getElementById('catalog-export');
   const rows = Array.from(section.querySelectorAll(':scope > ul > li'));
+  // OpenAndy is a personal public record. global-opportunity-radar is an
+  // observational view of public economic and technology signals. Neither
+  // is a career guide, local tool, business playbook, AI workflow, or
+  // growth reading list, so the fallback category "other" is intentional.
   const groups = [
     ['career', /student|career|job|offer|salary|unemployment|executive|求职|职场/],
-    ['tools', /free|photo|watermark|cover|gif|token|iptest|paper|工具/],
-    ['business', /income|money|ecommerce|creator|wechat-account|threads|x-income|商业|变现/],
-    ['workflow', /claude|workbuddy|doubao|grok|gemini|muse|skill|agent/],
+    ['tools', /free|photo|watermark|cover|gif|token|iptest|paper|liveppt|freepublish|freemacon|工具/],
+    ['business', /income|money|ecommerce|creator|wechat-account|threads|x-income|youtube|restaurant|acquisition|local-business|content-commerce|cross-border|商业|变现/],
+    ['workflow', /claude|workbuddy|doubao|grok|gemini|muse|skill|agent|seo-handbook|geo-handbook|antigravity/],
     ['growth', /intj|infj|醒觉|成长/],
   ];
   const data = rows.map((node) => {
