@@ -14,9 +14,9 @@
   const rows = Array.from(section.querySelectorAll(':scope > ul > li'));
   const groups = [
     ['career', /student|career|job|offer|salary|unemployment|executive|求职|职场/],
-    ['tools', /free|photo|watermark|cover|gif|token|iptest|paper|工具/],
-    ['business', /income|money|ecommerce|creator|wechat-account|threads|x-income|商业|变现/],
-    ['workflow', /claude|workbuddy|doubao|grok|gemini|muse|skill|agent/],
+    ['tools', /free|photo|watermark|cover|gif|token|iptest|paper|liveppt|freepublish|freemacon|工具/],
+    ['business', /income|money|ecommerce|creator|wechat-account|threads|x-income|youtube|restaurant|acquisition|local-business|content-commerce|cross-border|商业|变现/],
+    ['workflow', /claude|workbuddy|doubao|grok|gemini|muse|skill|agent|seo-handbook|geo-handbook|antigravity/],
     ['growth', /intj|infj|醒觉|成长/],
   ];
   const data = rows.map((node) => {

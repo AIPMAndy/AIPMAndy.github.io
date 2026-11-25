@@ -2,10 +2,10 @@
   "title": "AI酋长Andy 开源项目与免费工具导航册",
   "type": "portal directory; not a project audit",
   "source": "index.html / schema.org ItemList",
-  "source_last_modified_label": "2026-11-18",
-  "source_sha256": "c26eeaf6b765e42d34cee3b775d5dc7b5ca8ea42c4f03d7a9418a150f0937874",
-  "pdf_sha256": "634b5b9b4cc9efd4d2715a6ef94107c09b3227c07f8f927481c802a88b4afdc4",
-  "item_count": 45,
+  "source_last_modified_label": "2026-11-25",
+  "source_sha256": "dcdd67f1e980e154dc80d1179909212540b96f88919ff62bce71cf7e4ff2b74a",
+  "pdf_sha256": "3ea0277fdf4fd7bee3fd5ca40b5a041a20fcf3da4cf8b022dfb8c64d9efb7d61",
+  "item_count": 61,
   "output": "pdf/andy-open-source-catalog.pdf",
   "no_unverified_claims": true
 }

@@ -120,5 +120,22 @@ English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beij
 - [中国留学生 AI 岗位求职攻略｜AI酋长Andy](https://aipmandy.github.io/chinese-international-student-ai-jobs/)：算法、AI 工程与应用工程，含可运行练习与 PDF。不承诺录用。
 - [中国留学生商科岗位求职攻略｜AI酋长Andy](https://aipmandy.github.io/chinese-international-student-business-jobs/)：咨询、金融会计、市场、运营供应链、经营分析与销售 BD。不承诺录用。
 - [Gemini Canvas Video Kit｜AI酋长Andy](https://aipmandy.github.io/Gemini-Canvas-Video-Kit/)：只用 Gemini 网页版 Canvas，把一句话做成可录屏的网页视频。非 Google 官方。
+- [Gemini 保姆级实战攻略 2026｜AI酋长Andy](https://aipmandy.github.io/gemini-handbook/)：18 章、32 个实战 Prompt、7 天训练和 30 天项目路径，附 PDF。独立教程，非 Google 官方。
+- [LivePPT — Markdown 转交互式 HTML 演示页](https://aipmandy.github.io/LivePPT/)：把 Markdown 和 GitHub README 转成可翻页、可分享的独立 HTML。无需前端构建工具。
+- [从零做到可验证增长｜SEO保姆级教程](https://aipmandy.github.io/seo-handbook/)：41 章、164 项动作、30 天计划。关键词、技术 SEO、Search Console 与转化，每步有验收。
+- [GEO Handbook｜从零开始做 GEO](https://aipmandy.github.io/geo-handbook/)：26 章、16 个实验、25 套模板、6 个行业案例和 30 天计划。先做可信内容，不保证被引用。
+- [OpenAndy · 把我自己开源](https://aipmandy.github.io/OpenAndy/)：基于 AI酋长Andy 2026-11-07 公开自述。数字未审计，不承诺收益。
+- [YouTube 不露脸赚钱保姆级教程](https://aipmandy.github.io/HowToMakeMoneyOnYouTube/)：36 章实操、90 天任务、选题与数据诊断。
+- [AI 跨境电商赚钱实战手册](https://aipmandy.github.io/ai-cross-border-ecommerce-playbook/)：24 章、96 张操作卡、25 个可追溯案例和 30 天计划。免费开源。
+- [AI 做中国内容电商](https://aipmandy.github.io/ai-china-content-commerce-handbook/)：30 章、37 个可溯源案例、26 个提示词和 30 天计划。覆盖抖音、小红书、快手、视频号、淘宝。
+- [全球机会雷达](https://aipmandy.github.io/global-opportunity-radar/)：用可交互地球查看 25 个经济体的经济、AI 技术与创业信号。
+- [餐饮行业 AI 获客保姆级攻略](https://aipmandy.github.io/restaurant-ai-customer-acquisition-handbook/)：26 章教程和 30 天计划，面向餐饮门店获客。免费开源。
+- [知识付费行业 AI 获客保姆级攻略](https://aipmandy.github.io/ai-knowledge-paid-acquisition-handbook/)：咨询、课程、社群与企业培训的获客步骤，24 章、18 个提示词、22 份模板和 30 天计划。
+- [本地生意 AI 获客保姆级攻略](https://aipmandy.github.io/local-business-ai-growth-handbook/)：26 章、30 天计划，含提示词、行业案例，以及线索与利润测算。
+- [Claude Code 中文教程：Agent 实践图鉴](https://aipmandy.github.io/anthropic-claude-code-agent-handbook/)：6 章、10 个团队案例、6 类 Agent 架构、108 条官方资料。非 Anthropic 官方。
+- [FreePublish · 多平台内容审核与发布工作台](https://aipmandy.github.io/FreePublish/)：内容准备、逐平台审核、人工确认发布和结果留痕。
+- [Google AI 赚钱保姆级实战攻略](https://aipmandy.github.io/google-ai-income-handbook/)：8 条业务路径、22 章、16 套 Prompt、30 天计划和报价利润计算器。
+- [FreeMacOn — 合上 Mac，让 AI 继续工作](https://aipmandy.github.io/FreeMacOn/)：开源 macOS 菜单栏保活：定时合盖保活、电量保护和异常恢复。
+- [Antigravity 保姆级实战攻略](https://aipmandy.github.io/antigravity/)：15 章、50 项可验收操作。Mac/Windows 安装、Agent 权限、AI 编程和 GitHub Pages 上线。独立整理。
 
-_更新于 2026-11-15_
+_更新于 2026-11-25_
