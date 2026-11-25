@@ -2,7 +2,7 @@
 
 ## 全站导航下载
 
-- [全部开源项目与免费工具目录（网页版）](https://aipmandy.github.io/)：61 个门户可见项目条目，可本地搜索、按领域筛选及导出 TXT。
+- [全部开源项目与免费工具目录（网页版）](https://aipmandy.github.io/)：61 个门户可见项目条目，可本地搜索、按领域筛选及导出 TXT。本文件只列精选，不是全量；全量在网页目录和 llms-full.txt。
 - [可点击的同源导航 PDF](https://aipmandy.github.io/pdf/andy-open-source-catalog.pdf)：由门户 index.html 的 JSON-LD ItemList 自动生成。仅导航快照，不代表已核验每个项目最新可用性。
 - 作者：AI酋长Andy · 星觉科技；源码标注更新时间 2026-11-25。微信 AIPMAndy；个人 https://metaver.vip/；公司 https://www.a6no1.cn/。
 
@@ -66,22 +66,6 @@ English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beij
 - [中国留学生 AI 岗位](https://aipmandy.github.io/chinese-international-student-ai-jobs/)：算法、AI 工程与应用工程，含可运行练习。不承诺录用。
 - [中国留学生商科岗位](https://aipmandy.github.io/chinese-international-student-business-jobs/)：咨询、金融会计、市场、运营供应链、经营分析与销售 BD。不承诺录用。
 - [Gemini Canvas Video Kit](https://aipmandy.github.io/Gemini-Canvas-Video-Kit/)：用 Gemini 网页版 Canvas 做成可录屏的网页视频。非 Google 官方。
-- [LivePPT](https://aipmandy.github.io/LivePPT/)：把 Markdown 和 GitHub README 转成可翻页、可分享的独立 HTML。无需前端构建工具。
-- [SEO 保姆级教程](https://aipmandy.github.io/seo-handbook/)：41 章、164 项动作、30 天计划。每步有验收。
-- [GEO Handbook](https://aipmandy.github.io/geo-handbook/)：26 章、16 个实验、25 套模板、6 个行业案例和 30 天计划。不保证被引用。
-- [OpenAndy](https://aipmandy.github.io/OpenAndy/)：基于 2026-11-07 公开自述。数字未审计，不承诺收益。
-- [YouTube 不露脸赚钱教程](https://aipmandy.github.io/HowToMakeMoneyOnYouTube/)：36 章实操、90 天任务、选题与数据诊断。
-- [AI 跨境电商实战手册](https://aipmandy.github.io/ai-cross-border-ecommerce-playbook/)：24 章、96 张操作卡、25 个可追溯案例和 30 天计划。
-- [AI 做中国内容电商](https://aipmandy.github.io/ai-china-content-commerce-handbook/)：30 章、37 个可溯源案例和 30 天计划。
-- [全球机会雷达](https://aipmandy.github.io/global-opportunity-radar/)：用可交互地球查看 25 个经济体的经济、AI 技术与创业信号。
-- [餐饮行业 AI 获客](https://aipmandy.github.io/restaurant-ai-customer-acquisition-handbook/)：26 章教程和 30 天计划。
-- [知识付费行业 AI 获客](https://aipmandy.github.io/ai-knowledge-paid-acquisition-handbook/)：24 章、18 个提示词、22 份模板和 30 天计划。
-- [本地生意 AI 获客](https://aipmandy.github.io/local-business-ai-growth-handbook/)：26 章、30 天计划，含线索与利润测算。
-- [Claude Code 中文教程](https://aipmandy.github.io/anthropic-claude-code-agent-handbook/)：6 章、10 个团队案例。非 Anthropic 官方。
-- [FreePublish](https://aipmandy.github.io/FreePublish/)：多平台内容准备、逐平台审核、人工确认发布和结果留痕。
-- [Google AI 赚钱实战攻略](https://aipmandy.github.io/google-ai-income-handbook/)：8 条业务路径、22 章、16 套 Prompt 和 30 天计划。
-- [FreeMacOn](https://aipmandy.github.io/FreeMacOn/)：开源 macOS 菜单栏保活，含电量保护和异常恢复。
-- [Antigravity 实战攻略](https://aipmandy.github.io/antigravity/)：15 章、50 项可验收操作，含安装、Agent 权限和 GitHub Pages 上线。独立整理。
 
 ## 官方账号 / Official accounts（只认以下链接）
 

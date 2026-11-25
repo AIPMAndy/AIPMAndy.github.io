@@ -3,8 +3,8 @@
   "type": "portal directory; not a project audit",
   "source": "index.html / schema.org ItemList",
   "source_last_modified_label": "2026-11-25",
-  "source_sha256": "dcdd67f1e980e154dc80d1179909212540b96f88919ff62bce71cf7e4ff2b74a",
-  "pdf_sha256": "3ea0277fdf4fd7bee3fd5ca40b5a041a20fcf3da4cf8b022dfb8c64d9efb7d61",
+  "source_sha256": "8aba42597274be128ce6e3cc4713eee102891a4f4172aaaafc7955f566b7f645",
+  "pdf_sha256": "539ef775b68347f2a00a167fd193438b858bfc859565706062c921c2e0e80344",
   "item_count": 61,
   "output": "pdf/andy-open-source-catalog.pdf",
   "no_unverified_claims": true

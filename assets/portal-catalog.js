@@ -12,6 +12,10 @@
   const reset = document.getElementById('catalog-reset');
   const exportButton = document.getElementById('catalog-export');
   const rows = Array.from(section.querySelectorAll(':scope > ul > li'));
+  // OpenAndy is a personal public record. global-opportunity-radar is an
+  // observational view of public economic and technology signals. Neither
+  // is a career guide, local tool, business playbook, AI workflow, or
+  // growth reading list, so the fallback category "other" is intentional.
   const groups = [
     ['career', /student|career|job|offer|salary|unemployment|executive|求职|职场/],
     ['tools', /free|photo|watermark|cover|gif|token|iptest|paper|liveppt|freepublish|freemacon|工具/],
