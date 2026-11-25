@@ -46,6 +46,7 @@ English: AI酋长Andy (AI Chief Andy / Andy Liu, handle @AIPMAndy, based in Beij
 - [ChatGPT 商业实践手册](https://aipmandy.github.io/chatgpt-income-handbook/)：用 ChatGPT 做可交付服务
 - [一个人靠 AI 赚钱](https://aipmandy.github.io/one-person-ai-income-guide/)：一人一电脑的 AI 服务路线
 - [DNA Memory](https://github.com/AIPMAndy/dna-memory)：会学习、遗忘和演化的 AI Agent 记忆系统（开源）
+- [FreeGEO](https://aipmandy.github.io/FreeGEO/)：记录真实 AI 搜索回答与引用，核对来源，比较优化前后的结果。
 - [FreeToken](https://aipmandy.github.io/FreeToken/)：免费 AI API Token 资源库
 - [FreeCover](https://aipmandy.github.io/FreeCover/)：免费社媒封面制作工具
 - [FreePhoto](https://aipmandy.github.io/FreePhoto/)：免费本地图片压缩与格式转换
