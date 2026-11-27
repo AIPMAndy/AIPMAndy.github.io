@@ -1,0 +1,47 @@
+# FreePublish
+
+> 多平台视频发布的安全做法：规则边界、发布前审核、四平台流程、两种模式与失败复盘。文档许可 CC BY-NC 4.0。
+
+- 作者：AI酋长Andy（AIPMAndy），官网 https://metaver.vip/
+- 开源仓库：https://github.com/AIPMAndy/FreePublish
+- 在线地址：https://aipmandy.github.io/FreePublish/
+- 许可：CC BY-NC 4.0
+- 语言：中文（zh-CN）
+- 最近更新：2026-11-24
+
+## 这是什么
+
+在线使用：打开 FreePublish 工作台https://aipmandy.github.io/FreePublish/ · 独立上线验收https://github.com/AIPMAndy/AIPMAndy.github.io/actions/runs/44991290795
+安全多平台半自动发布工作台｜Local-first · Human-approved
+
+## 主要页面
+
+- [FreePublish · 安全多平台内容审核与发布工作台｜AI 酋长 Andy](https://aipmandy.github.io/FreePublish/)
+
+## 内容目录
+
+- 现在已支持
+- 启动（零依赖）
+- 新手 6 步
+- 运行测试
+- 我们借鉴了哪些开源产品
+- 我们不做的事
+- 许可证
+- 正式上线与发布方式
+- 尚未实现的企业级能力
+
+## 关键事实
+
+- 名称：FreePublish
+- 类型：中文开源项目
+- 许可：CC BY-NC 4.0
+- 语言：中文
+- 最近更新：2026-11-24
+- 仓库：https://github.com/AIPMAndy/FreePublish
+
+## 相关链接
+
+- [作者官网](https://metaver.vip/)
+- [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
+- [开源总目录](https://aipmandy.github.io/)
+- [机器可读摘要](https://aipmandy.github.io/FreePublish/llms.txt)
