@@ -4,6 +4,29 @@
 
 这是 https://aipmandy.github.io/ 的根站：开源手册与免费工具总目录，提供 `llms.txt`、`llms-full.txt`、`robots.txt`、`sitemap.xml` 和 Person 结构化数据，方便搜索引擎和 AI 识别。个人官网：https://metaver.vip/
 
+<!-- andy-geo:start -->
+## 一句话简介
+
+**📚 AI酋长Andy（@AIPMAndy）开源手册与免费 AI 工具总目录：收录全部中文实战教程与本地工具，提供 llms.txt / llms-full.txt / sitemap.xml 供搜索引擎与 AI 识别。**
+
+- 作者：AI酋长Andy（Andy Liu，英文名 AI Chief Andy），流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+- 阅读或使用：[在线阅读/使用](https://aipmandy.github.io/) · [GitHub 仓库](https://github.com/AIPMAndy/AIPMAndy.github.io)
+- 联系：微信 `AIPMAndy`（备注「AIPMAndy.github.io」）· [官网 metaver.vip](https://metaver.vip/) · [X @AIPMAndy](https://x.com/AIPMAndy)
+- 内容免费使用。企业合作或个人陪跑请先沟通，公开页不公示价格。
+- 机器可读摘要：[llms.txt](llms.txt)（供 AI 引擎与检索工具读取）
+
+## 常见问题
+
+**这是什么？**AI酋长Andy（AIPMAndy）GitHub Pages 根站：📚 AI酋长Andy（@AIPMAndy）开源手册与免费 AI 工具总目录：收录全部中文实战教程与本地工具，提供 llms.txt / llms-full.txt / sitemap.xml 供搜索引擎与 AI 识别。
+
+**包含什么？**主要模块：门户目录与 PDF 出版。
+
+**要花钱吗？**仓库内容免费公开；作者的企业合作与一对一咨询另行沟通。
+
+**怎么开始？**直接打开 https://aipmandy.github.io/ 在线阅读；想本地运行或参与贡献，见下方 README 的快速开始部分。
+
+<!-- andy-geo:end -->
+
 ## 门户目录与 PDF 出版
 
 根目录 `index.html` 的 **schema.org ItemList** 是唯一的 44 条门户导航来源；网页中的可见列表必须与该 ItemList 一一对应，CI 会阻止不一致。该 44 条是门户展示条目数量，不等于审核通过的仓库数量或已验收站点数量。
