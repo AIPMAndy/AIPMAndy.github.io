@@ -1,0 +1,14 @@
+# AI 与搜索引擎爬虫均欢迎抓取 / All search and AI crawlers welcome
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://aipmandy.github.io/FreePublish/sitemap.xml
